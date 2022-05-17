@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    font-size: 62.5%;
+    --bg-color: #000000;
+    --txt-color:  white;
+    --bg-number-button: #333333;
+    --bg-number-first-row: #A5A5A5;
+    --txt-number-first-row: #000000;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-color);
+}
+main{
+    margin-top: 10rem;
+}
+
+input{
+    background: transparent;
+    border: 0;
+    color: var(--txt-color);
+    text-align: end;
+    width: 40rem;
+    font-size: 12rem;
+    font-weight: 100;
+    padding-right: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.fields{
+    min-height: 10rem;
+    min-width: 40rem;
+    display: grid;
+    grid-template-areas:
+    "A B C D";
+    gap: 1.3rem;
+    align-items: center;
+    justify-content: center;
+    align-content: stretch;
+    justify-items: center;
+}
+button{
+    color: var(--txt-color);
+    background-color: var(--bg-number-button);
+    text-align: center;
+border: 0;
+height: 9rem;
+width: 9rem;
+border-radius: 9999px;
+font-weight: 400;
+font-size: 4.2rem;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.fields-row-1 button:not(:last-child){
+    color: var(--txt-number-first-row);
+    background-color: var(--bg-number-first-row);
+}
+.fields-row-5{
+    grid-template: "A A B C";
+}
+
+.operator{
+    background-color:#FF9F0A ;
+}
+.Zero{
+    width: 19.3rem;
+    grid-area: A;
+}
+
+.Comma{
+    grid-area: B;
+}
+.Result {
+    grid-area: C;
+}
