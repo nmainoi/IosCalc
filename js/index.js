@@ -1,10 +1,2 @@
-const CalcObject = {
-    oldValue,
-    newValue,
-    Operation
-}
-
-function main(){
-
-}
-
+import events from "./events.js";
+const Events = events();
