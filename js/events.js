@@ -1,7 +1,9 @@
 import elements from "./elements.js";
+import InsertNumbersOp from "./InsertNumbersOp.js"
+import calculator from "./Calculator.js"
 const Elements = elements();
-import operations from "./operations.js"
-const Operations = operations()
+const Operations = InsertNumbersOp()
+const Calculator = calculator()
 export default function events() {
 
 function AddNewNumber(number){
@@ -48,4 +50,25 @@ function AddNewNumber(number){
   Elements.buttonComma.addEventListener("click", function () {
     AddNewNumber(',')
   });
+  Elements.buttonPlus.addEventListener("click",function(){
+    Calculator.initOperation(Elements.calcDisplay.value ,'sum')
+    Elements.calcDisplay.value = 0;
+  })
+  Elements.buttonResult.addEventListener('click', function(){
+    let result = Calculator.DoCalc(Elements.calcDisplay.value)
+    console.log(result);
+    Elements.calcDisplay.value = result
+  })
+  Elements.buttonMinus.addEventListener("click",function(){
+    Calculator.initOperation(Elements.calcDisplay.value ,'sub')
+    Elements.calcDisplay.value = 0;
+  })
+  Elements.buttonMultiple.addEventListener("click",function(){
+    Calculator.initOperation(Elements.calcDisplay.value ,'multiple')
+    Elements.calcDisplay.value = 0;
+  })
+  Elements.buttonDivide.addEventListener("click",function(){
+    Calculator.initOperation(Elements.calcDisplay.value ,'div')
+    Elements.calcDisplay.value = 0;
+  })
 }

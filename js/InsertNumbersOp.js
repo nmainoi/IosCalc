@@ -1,5 +1,4 @@
-export default function operations() {
-    
+export default function InsertNumbersOp() {
   let hasComma = (number, oldnumber) => {
     if (number == "," && String(oldnumber).includes(",")) {
       return true;
@@ -13,13 +12,18 @@ export default function operations() {
     } else return false;
   };
 
-  let addDot = (number) => {
-    return number;
-  };
-
   let makeSum = (number, oldnumber) => {
     let sum = String(oldnumber) + String(number);
     return addDot(sum);
+  };
+  let addDot = (number) => {
+    let result = number;
+    if (result.includes(",")) return result;
+    if (result.includes(".")) {
+      result = String(result).replaceAll(".", "");
+    }
+    console.log(result);
+    return Number(result).toLocaleString("pt-BR");
   };
 
   function addNumber(number, oldnumber) {
@@ -32,5 +36,4 @@ export default function operations() {
     } else return makeSum(number, oldnumber);
   }
   return { addNumber };
-
 }

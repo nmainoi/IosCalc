@@ -12,6 +12,12 @@ export default function elements() {
   const calcDisplay = document.querySelector("#number_imput");
   const buttonComma = document.querySelector(".Comma");
   const buttonAC = document.querySelector('.AC')
+const buttonResult = document.querySelector('.Result')
+  const buttonPlus = document.querySelector('.Plus')
+  const buttonMinus = document.querySelector('.Minus')
+  const buttonMultiple = document.querySelector('.Multiple')
+  const buttonDivide = document.querySelector('.divide')
+
   return {
     buttonZero,
     buttonOne,
@@ -25,6 +31,11 @@ export default function elements() {
     buttonNine,
     buttonComma,
     calcDisplay,
-    buttonAC
+    buttonAC,
+    buttonPlus,
+    buttonResult,
+    buttonMinus,
+    buttonMultiple,
+    buttonDivide,
   };
 }
