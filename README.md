@@ -1,1 +1,1 @@
-# Clone da calculadora do javascript usando JS vanilla
+# Clone da calculadora do IOS usando JS vanilla
